@@ -15,4 +15,7 @@ for mass in ${masses[*]}; do
     for i in {0..2}; do
 	sed "s/<MASS>/${mass}/g" ${sample}/${sample}${postfix[$i]} > ${sample}$mass/${sample}$mass${postfix[$i]}
     done    
+
+    echo "dibosonResonanceModel.tgz" > ${sample}$mass/${sample}${mass}_extramodels.dat
+
 done
